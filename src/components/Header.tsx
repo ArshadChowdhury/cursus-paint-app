@@ -1,41 +1,32 @@
-import { useState } from "react";
-import { Menu, X } from 'lucide-react';
-
+// import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-amber-50 px-4 py-6">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <div className="text-2xl font-bold text-black">Font</div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-gray-700 hover:text-black">
-            Home
-          </a>
-          <a href="#" className="text-gray-700 hover:text-black">
-            About
-          </a>
-          <a href="#" className="text-gray-700 hover:text-black">
-            Services
-          </a>
-          <a href="#" className="text-gray-700 hover:text-black">
-            Contact
-          </a>
-        </nav>
+    <header className="bg-white max-w-7xl mx-auto px-4 pt-3 my-6 rounded-full">
+      <div className="relative flex items-center justify-center">
+        <img
+          className="h-14 w-30 object-contain"
+          src="/paint_logo.png"
+          alt="paint-logo"
+        />
 
         {/* Mobile Menu Button */}
-        <button
+        {/* <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X /> : <Menu />}
+        </button> */}
+        <button className="absolute flex items-center gap-2 cursor-pointer right-4 top-3">
+          <img className="w-5 h-5" src="/uk_flag.svg" alt="" />
+          <ChevronDown className="w-4 h-4" />
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation
       {isMenuOpen && (
         <nav className="md:hidden mt-4 pb-4">
           <div className="flex flex-col space-y-4">
@@ -53,7 +44,7 @@ export default function Header() {
             </a>
           </div>
         </nav>
-      )}
+      )} */}
     </header>
   );
 }

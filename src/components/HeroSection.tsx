@@ -4,7 +4,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-amber-50 px-4 py-16">
+    <section className="px-4 py-16">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
